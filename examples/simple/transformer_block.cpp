@@ -509,14 +509,14 @@ int main(int argc, char **argv) {
     printf("\nTotal time for %d runs: %.6fs  (avg: %.6fs per run)\n",
            n_runs, total_elapsed, total_elapsed / n_runs);
 
-    for (size_t i = 0; i < mean_output.size(); ++i) {
-        mean_output[i] /= (double)N_INPUTS;
-    }
+    // for (size_t i = 0; i < mean_output.size(); ++i) {
+    //     mean_output[i] /= (double)N_INPUTS;
+    // }
 
-    printf("Mean output over %d runs (first 10 elements):\n", N_INPUTS);
-    for (int i = 0; i < std::min<int64_t>(10, (int64_t)mean_output.size()); ++i) {
-        printf("  mean_output[%d] = %f\n", i, mean_output[i]);
-    }
+    // printf("Mean output over %d runs (first 10 elements):\n", N_INPUTS);
+    // for (int i = 0; i < std::min<int64_t>(10, (int64_t)mean_output.size()); ++i) {
+    //     printf("  mean_output[%d] = %f\n", i, mean_output[i]);
+    // }
 
     // （Peak RSS）”
     {
