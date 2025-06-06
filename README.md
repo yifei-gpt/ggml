@@ -37,7 +37,7 @@ Transformer_Block code is located in the:
 After building, running it like this:  
 ```bash
 cd build
-./bin/transformer_block <n_tokens> <n_embd> <n_head_q> <n_head_kv> <ffn_hidden_dim> <batch_size> <dtype> <N_INPUTS>
+./bin/transformer_block <n_tokens> <n_embd> <n_head_q> <n_head_kv> <ffn_hidden_dim> <batch_size> <dtype> <N_INPUTS> <threads>
 ```
 
 ###  Argument Description
@@ -52,13 +52,13 @@ cd build
 | `<batch_size>`     | Number of samples per batch                                      |
 | `<dtype>`          | Weight type: `fp32`, `fp16`, `int8`, or `int4`                   |
 | `<N_INPUTS>`       | Total number of input sequences to process                       |
-
+| `<threads>`        | Threads                                                          |
 
 For example,
 ```bash
-./bin/transformer_block 512 2048 32 8 8192 1 int8 71     ##LLaMA 3.2-1B
-./bin/transformer_block 512 3072 24 8 8192 1 int8 71     ##LLaMA 3.2-3B
-./bin/transformer_block 512 4096 32 8 14336 1 int8 71     ##LLaMA 3-8B
+./bin/transformer_block 512 2048 32 8 8192 1 int8 71 4    ##LLaMA 3.2-1B
+./bin/transformer_block 512 3072 24 8 8192 1 int8 71 4   ##LLaMA 3.2-3B
+./bin/transformer_block 512 4096 32 8 14336 1 int8 71 4    ##LLaMA 3-8B
 ```
 
 
